@@ -209,7 +209,7 @@ jobs:
     executor: anchore/anchore_engine
     steps:
       - scan_jahia:
-          jver: "parameters.jver"
+          jver: "<< parameters.jver >>"
           tag_suffix: "<< parameters.suffixend >>"
           registry_user: "$DOCKER_LOGIN"
           registry_pass: "$DOCKER_PASSWORD"
@@ -222,11 +222,11 @@ workflows:
     jobs:
       ### Build images, push them to a private repo and test them ###
       ############# 8.0.1.0
-      - build_8010:
-          <<: *job_options
+#      - build_8010:
+#          <<: *job_options
       - scan_latest:
           <<: *job_options
           slack_channel: "slack_trigger_test"
           jver: "8.0.1.0"
-          requires:
-            - build_8010
+#          requires:
+#            - build_8010
