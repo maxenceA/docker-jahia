@@ -50,7 +50,7 @@ commands:
         type: string
         default: "2.0.3"
     steps:
-#      - setup_remote_docker
+      - setup_remote_docker
       - checkout
       - docker/check
       - docker/build:
@@ -110,8 +110,8 @@ commands:
           command: |
             apk update &&
             apk add bash curl
-#      - setup_remote_docker:
-#          docker_layer_caching: true
+      - setup_remote_docker:
+          docker_layer_caching: true
       - checkout
       - anchore/start_engine
       - anchore/add_private_registry:
