@@ -223,6 +223,7 @@ workflows:
       - build_8010:
           <<: *job_options
       - scan_latest:
+          <<: *job_options
           slack_channel: "slack_trigger_test"
           requires:
             - build_8010
