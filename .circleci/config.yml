@@ -162,8 +162,7 @@ filters: &filters
 
 job_options: &job_options
   context:
-    - cloud-docker-hub
-    - cloud-slack
+    - cloud-qa
   <<: *filters
 
 environment_jahia: &environment_jahia
