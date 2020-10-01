@@ -1,7 +1,6 @@
 ---
 
 ############################
-# Workflow summary :
 # Build Jahia images and push them on a private repo for test purpose
 # Pull Jahia images and test them automatically
 # Ask for human validation before pushing images to the public repo
