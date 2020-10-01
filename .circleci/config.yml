@@ -145,7 +145,7 @@ suffixend_def_param: &suffixend_def_param
   #############################
   suffixend:
     type: string
-    default: ""
+    default: "mysuffix"
     # example for test build:
     # default: "_<< pipeline.git.branch >>"
     # WHEN USING A VALUE HERE,
